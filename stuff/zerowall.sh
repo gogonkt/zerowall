@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#wget -c 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt'
+wget -c 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt'
 echo -e "function FindProxyForURL( url, host )\n{\n\tif ( shExpMatch(url, \"*google.com*\")"
 
 base64 -d  ~/share/firefox.setting/gfw/gfwlist.txt \
