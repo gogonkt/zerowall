@@ -1,0 +1,9 @@
+ZeroWall
+====
+
+auto conver gfwlist to pac file from autoproxy project
+
+Usage:
+    % stuff/zerowall.sh > zerowall.pac
+
+then config pac setting in web browser.
