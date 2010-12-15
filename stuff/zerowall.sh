@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# wget -c 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt'
 echo -e "function FindProxyForURL( url, host )\n{\n\tif ( shExpMatch(url, \"*google.com*\")"
 
-# base64 -d  ./gfwlist.txt \\
 curl 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt' 2>/dev/null \
     | base64 -d \
     | sed 's/@\||\|^\.\|\/$//g' |sort -u \
